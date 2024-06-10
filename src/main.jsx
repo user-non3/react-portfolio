@@ -1,13 +1,16 @@
-import React, { Suspense } from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./scss/main.scss";
-import "./i18n/index.js";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Root from './container/Root'
+import './stylesheet/stylesheet.css'
+import CreateLayout from './layout/global'
+
+//
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Suspense fallback={<h1>Loading...</h1>}>
-      <App />
-    </Suspense>
-  </React.StrictMode>
+    <React.StrictMode>
+        <CreateLayout>
+            <Root />
+        </CreateLayout>
+    </React.StrictMode>,
 );
